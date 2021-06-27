@@ -5,7 +5,7 @@ export default makeStyles(() => ({
 		display: "flex",
 		// border: "solid 2px red",
 		gap: "10px",
-		margin: "20px 10px",
+		margin: "20px 10px 10px 10px",
 
 		alignItems: "start",
 	},
@@ -14,7 +14,7 @@ export default makeStyles(() => ({
 		textAlign: "left",
 
 		"& > div": {
-			margin: "0 10px 10px 0",
+			margin: "0 0px 10px 0",
 			backgroundColor: "white",
 			padding: "10px 0 0 10px",
 		},
