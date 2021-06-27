@@ -6,17 +6,17 @@ import { useState } from "react";
 
 function App() {
 	const [cartItems, setCartItems] = useState([]);
-	//	const [itemsSavedForLater, setItemsSavedForLater] = useState([]);
+	const [itemsSavedForLater, setItemsSavedForLater] = useState([]);
 
 	return (
 		<div className="App">
 			<Router>
 				<Switch>
 					<Route path="/cart" exact>
-						<Cart cartItems={cartItems} setCartItems={setCartItems} />
+						<Cart cartItems={cartItems} setCartItems={setCartItems} itemsSavedForLater={itemsSavedForLater} setItemsSavedForLater={setItemsSavedForLater} />
 					</Route>
 					<Route path="/" exact>
-						<Home cartItems={cartItems} setCartItems={setCartItems} />
+						<Home cartItems={cartItems} setCartItems={setCartItems} setItemsSavedForLater={setItemsSavedForLater} />
 					</Route>
 				</Switch>
 			</Router>

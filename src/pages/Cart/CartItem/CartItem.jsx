@@ -5,7 +5,7 @@ import useStyles from "./styles";
 import RemoveIcon from "@material-ui/icons/Remove";
 import AddIcon from "@material-ui/icons/Add";
 
-const CartItem = ({ itemObj, setCartItems, setTotalAmount, setUndiscountedTotalAmount }) => {
+const CartItem = ({ itemObj, setCartItems, setTotalAmount, setUndiscountedTotalAmount, setItemsSavedForLater }) => {
 	const [item, setItem] = useState({ ...itemObj, quantity: localStorage.getItem(itemObj.id) || 1 });
 	const classes = useStyles();
 
@@ -33,6 +33,15 @@ const CartItem = ({ itemObj, setCartItems, setTotalAmount, setUndiscountedTotalA
 			return newItems;
 		});
 		localStorage.removeItem(item.id);
+	};
+
+	const saveForLater = item => {
+		removeFromCart(item);
+		setItemsSavedForLater(prevItems => {
+			const newItems = [...prevItems];
+			newItems.push(item);
+			return newItems;
+		});
 	};
 
 	const decrementItem = () => {
@@ -80,7 +89,7 @@ const CartItem = ({ itemObj, setCartItems, setTotalAmount, setUndiscountedTotalA
 				</div>
 
 				<div>
-					<Button>Save for later</Button>
+					<Button onClick={() => saveForLater(item)}>Save for later</Button>
 					<Button onClick={() => removeFromCart(item)}>Remove</Button>
 				</div>
 			</div>

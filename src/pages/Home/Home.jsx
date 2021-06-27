@@ -9,7 +9,7 @@ import CardContent from "@material-ui/core/CardContent";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 
-const Home = ({ cartItems, setCartItems }) => {
+const Home = ({ cartItems, setCartItems, setItemsSavedForLater }) => {
 	const redirectToCartButton = (
 		<IconButton color="primary">
 			<Link to="/cart" style={{ textDecoration: "none", color: "white" }}>
@@ -23,6 +23,14 @@ const Home = ({ cartItems, setCartItems }) => {
 			const newItems = [...prevState];
 			newItems.push(item);
 			return newItems;
+		});
+		setItemsSavedForLater(prevState => {
+			const newItems = [...prevState];
+			const deleteItemIndex = newItems.findIndex(newItem => newItem.id === item.id);
+			if (deleteItemIndex > -1) {
+				newItems.splice(deleteItemIndex);
+				return newItems;
+			} else return prevState;
 		});
 	};
 

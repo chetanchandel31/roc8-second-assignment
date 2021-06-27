@@ -12,11 +12,11 @@ export default makeStyles(() => ({
 	leftPanel: {
 		flexGrow: 1,
 		textAlign: "left",
-		backgroundColor: "white",
-		padding: "10px 0 0 10px",
 
 		"& > div": {
-			margin: "0 10px",
+			margin: "0 10px 10px 0",
+			backgroundColor: "white",
+			padding: "10px 0 0 10px",
 		},
 	},
 	cardItemsContainer: {},

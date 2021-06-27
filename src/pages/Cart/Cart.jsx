@@ -5,8 +5,9 @@ import { Typography, Divider, IconButton } from "@material-ui/core";
 import CartItem from "./CartItem/CartItem";
 import { useState } from "react";
 import HomeIcon from "@material-ui/icons/Home";
+import ItemsSavedForLater from "./ItemSavedForLater/ItemSavedForLater";
 
-const Cart = ({ cartItems, setCartItems, itemsSavedForLater }) => {
+const Cart = ({ cartItems, setCartItems, itemsSavedForLater, setItemsSavedForLater }) => {
 	const [totalAmount, setTotalAmount] = useState(0);
 	const [undiscountedTotalAmount, setUndiscountedTotalAmount] = useState(0);
 	const classes = useStyles();
@@ -38,10 +39,20 @@ const Cart = ({ cartItems, setCartItems, itemsSavedForLater }) => {
 								setCartItems={setCartItems}
 								setTotalAmount={setTotalAmount}
 								setUndiscountedTotalAmount={setUndiscountedTotalAmount}
+								setItemsSavedForLater={setItemsSavedForLater}
 							/>
 						))}
 					</div>
-					{itemsSavedForLater ? <div>Saved for later</div> : null}
+					{itemsSavedForLater.length > 0 ? (
+						<div>
+							<Typography variant="h5">
+								<strong>Saved for later</strong>
+							</Typography>
+							{itemsSavedForLater.map(item => (
+								<ItemsSavedForLater item={item} setCartItems={setCartItems} setItemsSavedForLater={setItemsSavedForLater} />
+							))}
+						</div>
+					) : null}
 				</div>
 				<div className={classes.rightPanel}>
 					<Typography>PRICE DETAILS</Typography>
