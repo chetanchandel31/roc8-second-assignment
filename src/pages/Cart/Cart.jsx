@@ -48,10 +48,10 @@ const Cart = ({ cartItems, setCartItems, itemsSavedForLater }) => {
 					<Divider />
 					<div className={classes.priceDetails}>
 						<div>
-							<span>Price: </span> <span>{undiscountedTotalAmount}</span>
+							<span>Price: </span> <span>₹{undiscountedTotalAmount}</span>
 						</div>
 						<div>
-							<span>Discount: </span> <span>-{undiscountedTotalAmount - totalAmount}</span>
+							<span>Discount: </span> <span>-₹{undiscountedTotalAmount - totalAmount}</span>
 						</div>
 						<div>
 							<span>Delievery charges: </span> <span>Free</span>
@@ -62,11 +62,11 @@ const Cart = ({ cartItems, setCartItems, itemsSavedForLater }) => {
 								<strong>Total Amount:</strong>{" "}
 							</span>{" "}
 							<span>
-								<strong>{totalAmount}</strong>
+								<strong>₹{totalAmount}</strong>
 							</span>
 						</div>
 						<Divider />
-						<footer>You will save {undiscountedTotalAmount - totalAmount} on this order.</footer>
+						<footer>You will save ₹{undiscountedTotalAmount - totalAmount} on this order.</footer>
 					</div>
 				</div>
 			</div>
