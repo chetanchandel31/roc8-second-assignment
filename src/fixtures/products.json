@@ -1,0 +1,68 @@
+[
+	{
+		"id": 0,
+		"price": 228,
+		"discountedPrice": 205,
+		"discount": 10,
+		"name": "solid women raincoat",
+		"size": "S",
+		"brand": "brand x",
+		"idealFor": "women",
+		"image": "https://rukminim1.flixcart.com/image/495/594/kmmcrrk0/raincoat/i/v/h/l-r1-jim-dandy-original-imagfgn4g5mnabhz.jpeg?q=50"
+	},
+	{
+		"id": 1,
+		"price": 1099,
+		"discountedPrice": 479,
+		"discount": 56,
+		"name": "super slim fit shirt",
+		"size": "M",
+		"brand": "brand y",
+		"idealFor": "men",
+		"image": "https://rukminim1.flixcart.com/image/495/594/kmthz0w0/shirt/s/o/h/40-pjsfpssp507682-peter-england-original-imagfmw2tceseneg.jpeg?q=50"
+	},
+	{
+		"id": 2,
+		"price": 999,
+		"discountedPrice": 221,
+		"discount": 77,
+		"name": "casual sleeveless",
+		"size": "L",
+		"brand": "brand z",
+		"idealFor": "women",
+		"image": "https://rukminim1.flixcart.com/image/495/594/kbtp0280/top/z/f/u/xl-2960-darzi-original-imaft2fmzaxykgrn.jpeg?q=50"
+	},
+	{
+		"id": 3,
+		"price": 999,
+		"discountedPrice": 394,
+		"discount": 60,
+		"name": "solid men raincoat",
+		"size": "XL",
+		"brand": "brand z",
+		"idealFor": "men",
+		"image": "https://rukminim1.flixcart.com/image/495/594/kmmcrrk0/raincoat/e/y/p/l-brc-001-jim-dandy-original-imagfh48fr8pywvc.jpeg?q=50"
+	},
+	{
+		"id": 4,
+		"price": 1599,
+		"discountedPrice": 304,
+		"discount": 80,
+		"name": "solid daily wear saree",
+		"size": "S",
+		"brand": "brand y",
+		"idealFor": "women",
+		"image": "https://rukminim1.flixcart.com/image/495/594/k12go7k0/sari/p/h/c/free-bd030-bollydoll-designer-original-imafgjenbe7kr3fu.jpeg?q=50"
+	},
+	{
+		"id": 5,
+		"price": 999,
+		"discountedPrice": 384,
+		"discount": 61,
+		"name": "men vest",
+		"size": "M",
+		"brand": "brand x",
+		"idealFor": "men",
+		"image": "https://rukminim1.flixcart.com/image/309/371/j7ksia80/vest/a/5/k/85-venus-wh-rn-5pc-lux-venus-original-imaewph32hnwbqvc.jpeg?q=50"
+	}
+]
