@@ -19,13 +19,20 @@ const CartItem = ({ itemObj, setCartItems, setTotalAmount, setUndiscountedTotalA
 		setUndiscountedTotalAmount(prevAmount => prevAmount + item.price * item.quantity);
 
 		return () => {
-			setTotalAmount(prevAmount => prevAmount - item.discountedPrice * item.quantity);
-			setUndiscountedTotalAmount(prevAmount => prevAmount - item.price * item.quantity);
+			// setTotalAmount(prevAmount => {
+			// 	console.log(prevAmount, item.discountedPrice, item.quantity);
+			// 	return prevAmount - item.discountedPrice * item.quantity;
+			// });
+			// //prettier-ignore
+			// setUndiscountedTotalAmount(prevAmount => prevAmount - (item.price * item.quantity));
 		};
 		// eslint-disable-next-line
 	}, []);
 
 	const removeFromCart = item => {
+		setTotalAmount(prevAmount => prevAmount - item.discountedPrice * item.quantity);
+		setUndiscountedTotalAmount(prevAmount => prevAmount - item.price * item.quantity);
+
 		setCartItems(prevItems => {
 			const newItems = [...prevItems];
 			const deleteItemIndex = newItems.findIndex(newItem => newItem.id === item.id);
