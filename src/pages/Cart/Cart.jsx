@@ -20,8 +20,6 @@ const Cart = ({ cartItems, setCartItems, itemsSavedForLater, setItemsSavedForLat
 		</IconButton>
 	);
 
-	console.log(cartItems);
-
 	return (
 		<div>
 			<Header navigationButton={redirectToHomeButton} />
@@ -49,7 +47,7 @@ const Cart = ({ cartItems, setCartItems, itemsSavedForLater, setItemsSavedForLat
 								<strong>Saved for later</strong>
 							</Typography>
 							{itemsSavedForLater.map(item => (
-								<ItemsSavedForLater item={item} setCartItems={setCartItems} setItemsSavedForLater={setItemsSavedForLater} />
+								<ItemsSavedForLater item={item} key={item.id} setCartItems={setCartItems} setItemsSavedForLater={setItemsSavedForLater} />
 							))}
 						</div>
 					) : null}

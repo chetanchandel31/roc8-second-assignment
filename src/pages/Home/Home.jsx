@@ -38,7 +38,7 @@ const Home = ({ cartItems, setCartItems, setItemsSavedForLater }) => {
 		<div>
 			<Header navigationButton={redirectToCartButton} />
 
-			<Grid container alignItems="stretch" spacing={0} style={{ marginTop: "20px" }}>
+			<Grid container alignItems="stretch" spacing={0} style={{ margin: "20px 0" }}>
 				{products.map(item => (
 					<Grid key={item.id} item xs={12} sm={4} md={4} lg={4} style={{ padding: "5px" }}>
 						<Card>
@@ -53,7 +53,7 @@ const Home = ({ cartItems, setCartItems, setItemsSavedForLater }) => {
 								</Typography>
 							</CardContent>
 							<div style={{ textAlign: "right" }}>
-								{!cartItems.includes(item) ? (
+								{!cartItems.find(cartItem => cartItem.id === item.id) ? (
 									<Button style={{ marginRight: "10px", color: "green" }} startIcon={<AddShoppingCartIcon />} onClick={() => addToCart(item)}>
 										Add to cart
 									</Button>
